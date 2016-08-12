@@ -1,18 +1,28 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Ante Adamovic's Profile</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Muli%7CRoboto:400,300,500,700,900" rel="stylesheet"></head>
-  <body>
+  <head>
+    <meta charset="utf-8">
+    <title>Ante Adamovic's Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Muli%7CRoboto:400,300,500,700,900" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="http://angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
+
+    <!-- <script src="js/angular.js"></script>
+    <script src="js/angular-route.js"></script> -->
+    <script src="js/app.js"></script>
+
+  </head>
+  <body ng-app="profile-app" ng-controller="profile-controller">
 
     <div class="main-nav">
         <ul class="nav">
           <li class="name">Ante Adamovic</li>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Experience</a></li>
+          <li><a href="#/home">Home</a></li>
+          <li><a href="#/experience">Experience</a></li>
+          <li><a href="#/contact">Contact</a></li>
         </ul>
     </div>
 
@@ -22,26 +32,9 @@
       <p class="tag location">My home is Zagreb, Croatia.</p>
     </header>
 
-    <main class="flex">
-      <div class="card">
-        <h2>Background</h2>
-        <p>I’m an aspiring developer who loves everything about programming. I've worked with lots of different technologies and started web development just recently. I’m excited to bring my life experience to the process of building fantastic applications.</p>
-        <p>I’m a life-long learner who's always interested in expanding my skills and knowledge.</p>
-      </div>
-
-      <div class="card">
-        <h2>Goals</h2>
-        <p>I want to master the process of building web sites and increase my knowledge, skills and abilities in:</p>
-        <ul class="skills">
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>PHP</li>
-          <li>MySQL</li>
-        </ul>
-        <p>I’d like to work for a software development firm and work with complex systems.</p>
-      </div>
-
+    <main>
+      <div class="view-title"><h2>{{viewTitle}}</h2></div>
+      <div class="flex" ui-view></div>
     </main>
     <footer>
       <ul>
@@ -49,7 +42,7 @@
         <li><a href="https://www.linkedin.com/in/ante-adamovic-72933960" class="social linkedin" target="_blank">LinkedIn</a></li>
         <li><a href="https://github.com/anteAdamovic" class="social github" target="_blank">Github</a></li>
       </ul>
-      <p class="copyright">Copyright 2016, Ante Adamvic</p>
+      <p class="copyright">Copyright 2016, Ante Adamovic</p>
     </footer>
   </body>
   </html>
