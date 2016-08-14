@@ -1,24 +1,5 @@
 var app = angular.module('profile-app', ['ui.router']);
 
-// app.config(function($routeProvider){
-//
-//   $routeProvider
-//     .when('/home', {
-//       templateUrl: 'views/home.html',
-//       controller: function($scope){
-//         $scope.viewTitle = '';
-//       }
-//     })
-//     .when('/experience', {
-//       templateUrl: 'views/experience.html',
-//       controller: function($scope){
-//         $scope.viewTitle = 'Experience';
-//       }
-//     });
-//
-//   $routeProvider.otherwise('/home');
-// });
-
 app.config(function($stateProvider, $urlRouterProvider){
 
   $stateProvider
