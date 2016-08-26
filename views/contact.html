@@ -2,10 +2,10 @@
 
 <div class="card">
   <form action="#/thankYou">
-    <p> Name: &nbsp<input type="text" name="name" ng-model="name" placeholder="Your name ..."></p>
-    <p> Email: &nbsp&nbsp<input type="email" name="email" ng-model="email" placeholder="Your email ..."></p>
+    <p> Name: &nbsp;<input type="text" name="name" data-ng-model="name" placeholder="Your name ..."></p>
+    <p> Email: &nbsp;&nbsp;<input type="email" name="email" data-ng-model="email" placeholder="Your email ..."></p>
     <p> Message: </p>
-    <textarea class="contact-message" rows="4" cols="56" name="message" ng-model="message" placeholder="Enter your message here ..."></textarea>
-    <input type="submit" class="contact-button" value="Send" ng-click="setValues(name, email)"/>
+    <textarea class="contact-message" rows="4" cols="56" name="message" data-ng-model="message" placeholder="Enter your message here ..."></textarea>
+    <input type="submit" class="contact-button" value="Send" data-ng-click="setValues(name, email)"/>
   </form>
 </div>
